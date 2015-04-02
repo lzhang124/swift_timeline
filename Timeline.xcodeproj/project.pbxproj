@@ -13,6 +13,7 @@
 		46C6352C1ACCC05000E759AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C6352B1ACCC05000E759AF /* Images.xcassets */; };
 		46C6352F1ACCC05000E759AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C6352D1ACCC05000E759AF /* LaunchScreen.xib */; };
 		46C6353B1ACCC05000E759AF /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6353A1ACCC05000E759AF /* TimelineTests.swift */; };
+		46C635451ACCC07300E759AF /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C635441ACCC07300E759AF /* TimelineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		46C635341ACCC05000E759AF /* TimelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C635391ACCC05000E759AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C6353A1ACCC05000E759AF /* TimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTests.swift; sourceTree = "<group>"; };
+		46C635441ACCC07300E759AF /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				46C635241ACCC05000E759AF /* AppDelegate.swift */,
 				46C635261ACCC05000E759AF /* ViewController.swift */,
+				46C635441ACCC07300E759AF /* TimelineView.swift */,
 				46C635281ACCC05000E759AF /* Main.storyboard */,
 				46C6352B1ACCC05000E759AF /* Images.xcassets */,
 				46C6352D1ACCC05000E759AF /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C635271ACCC05000E759AF /* ViewController.swift in Sources */,
+				46C635451ACCC07300E759AF /* TimelineView.swift in Sources */,
 				46C635251ACCC05000E759AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
