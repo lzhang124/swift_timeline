@@ -13,15 +13,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var table: UITableView!
     
     var people = [
-        (time: "9:47 AM", image: UIImage(named: "jenn.png")),
-        (time: "10:23 AM", image: UIImage(named: "yasyf.png")),
-        (time: "11:58 AM", image: UIImage(named: "david.png")),
-        (time: "12:06 PM", image: UIImage(named: "rumya.png")),
-        (time: "1:34 PM", image: UIImage(named: "rose.png")),
-        (time: "1:40 PM", image: UIImage(named: "tim.png")),
-        (time: "2:11 PM", image: UIImage(named: "jaimie.png")),
-        (time: "3:00 PM", image: UIImage(named: "emma.png")),
-        (time: "4:29 PM", image: UIImage(named: "blake.png")),
+        (time: "9:47 AM", image: UIImage(named: "jenn.png"), name: "Jenn"),
+        (time: "10:23 AM", image: UIImage(named: "yasyf.png"), name: "Yasyf"),
+        (time: "11:58 AM", image: UIImage(named: "david.png"), name: "David"),
+        (time: "12:06 PM", image: UIImage(named: "rumya.png"), name: "Rumya"),
+        (time: "1:34 PM", image: UIImage(named: "rose.png"), name: "Rose"),
+        (time: "1:40 PM", image: UIImage(named: "tim.png"), name: "Tim"),
+        (time: "2:11 PM", image: UIImage(named: "jaimie.png"), name: "Jaimie"),
+        (time: "3:00 PM", image: UIImage(named: "emma.png"), name: "Emma"),
+        (time: "4:29 PM", image: UIImage(named: "blake.png"), name: "Blake"),
     ]
     
     override func viewDidLoad() {
@@ -45,6 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.timeStamp.text = people[indexPath.row].time
         cell.profilePicture.image = people[indexPath.row].image
         cell.profilePicture.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [231.0/255.0, 145.0/255.0, 42.0/255.0, 1.0])
+        cell.name.text = people[indexPath.row].name
         
         return cell
     }

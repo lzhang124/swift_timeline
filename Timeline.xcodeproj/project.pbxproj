@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4604A70E1ACE74E500AED0E6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4604A70C1ACE74E500AED0E6 /* Person.swift */; };
 		4604A70F1ACE74E500AED0E6 /* Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4604A70D1ACE74E500AED0E6 /* Person.xib */; };
+		4604A7131ACE82E000AED0E6 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4604A7121ACE82BA00AED0E6 /* Bariol_Regular.otf */; };
 		462810EF1ACE66A900643273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462810EE1ACE66A900643273 /* AppDelegate.swift */; };
 		462810F11ACE66A900643273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462810F01ACE66A900643273 /* ViewController.swift */; };
 		462810F41ACE66A900643273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462810F21ACE66A900643273 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		4604A70C1ACE74E500AED0E6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4604A70D1ACE74E500AED0E6 /* Person.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Person.xib; sourceTree = "<group>"; };
+		4604A7121ACE82BA00AED0E6 /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		462810E91ACE66A900643273 /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462810ED1ACE66A900643273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462810EE1ACE66A900643273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		462810EC1ACE66A900643273 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4604A7121ACE82BA00AED0E6 /* Bariol_Regular.otf */,
 				462810ED1ACE66A900643273 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -139,6 +142,7 @@
 				462810F91ACE66A900643273 /* LaunchScreen.xib in Resources */,
 				4604A70F1ACE74E500AED0E6 /* Person.xib in Resources */,
 				462810F61ACE66A900643273 /* Images.xcassets in Resources */,
+				4604A7131ACE82E000AED0E6 /* Bariol_Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
