@@ -15,7 +15,7 @@ public struct TimeFrame {
 //    let button: UIButton
 }
 
-public class TimeLineView: UIView {
+public class TimelineView: UIView {
     public var timeFrames: [TimeFrame]
     public var lineColor = UIColor(red: 0.906, green: 0.569, blue: 0.165, alpha: 1.000)
     public var timeColor = UIColor(red: 0.608, green: 0.608, blue: 0.608, alpha: 1.000)
@@ -44,7 +44,6 @@ public class TimeLineView: UIView {
             ])
         
         var i = 0
-        
         var viewFromAbove = guideView
         
         for element in timeFrames {
@@ -58,8 +57,6 @@ public class TimeLineView: UIView {
             i++
         }
         
-        let extraSpace: CGFloat = 200
-        
         let line = UIView()
         line.setTranslatesAutoresizingMaskIntoConstraints(false)
         line.backgroundColor = lineColor
@@ -68,10 +65,10 @@ public class TimeLineView: UIView {
         addConstraints([
             NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 2.5),
-            NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 200)
+            NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: guideView, attribute: .Top, multiplier: 1.0, constant: -200),
+            NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 200),
             ])
-        addConstraint(NSLayoutConstraint(item: viewFromAbove, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: viewFromAbove, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -30))
     }
 
     private func blockForTimeFrame(element: TimeFrame, imageTag: Int) -> UIView {
@@ -88,7 +85,7 @@ public class TimeLineView: UIView {
         v.addConstraints([
             NSLayoutConstraint(item: timeStamp, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60),
             NSLayoutConstraint(item: timeStamp, attribute: .CenterX, relatedBy: .Equal, toItem: v, attribute: .CenterX, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: timeStamp, attribute: .Top, relatedBy: .Equal, toItem: v, attribute: .Top, multiplier: 1.0, constant: 20)
+            NSLayoutConstraint(item: timeStamp, attribute: .Top, relatedBy: .Equal, toItem: v, attribute: .Top, multiplier: 1.0, constant: 20),
             ])
         
         if let image = element.image {
@@ -102,7 +99,8 @@ public class TimeLineView: UIView {
                 NSLayoutConstraint(item: backgroundViewForImage, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 80),
                 NSLayoutConstraint(item: backgroundViewForImage, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 80),
                 NSLayoutConstraint(item: backgroundViewForImage, attribute: .CenterX, relatedBy: .Equal, toItem: v, attribute: .CenterX, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: backgroundViewForImage, attribute: .Top, relatedBy: .Equal, toItem: v, attribute: .Top, multiplier: 1.0, constant: 40)
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .Top, relatedBy: .Equal, toItem: timeStamp, attribute: .Bottom, multiplier: 1.0, constant: 5),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .Bottom, relatedBy: .Equal, toItem: v, attribute: .Bottom, multiplier: 1.0, constant: 0),
                 ])
             
             let imageView = UIImageView(image: image)
@@ -116,7 +114,7 @@ public class TimeLineView: UIView {
                 NSLayoutConstraint(item: imageView, attribute: .Left, relatedBy: .Equal, toItem: backgroundViewForImage, attribute: .Left, multiplier: 1.0, constant: 2.5),
                 NSLayoutConstraint(item: imageView, attribute: .Right, relatedBy: .Equal, toItem: backgroundViewForImage, attribute: .Right, multiplier: 1.0, constant: -2.5),
                 NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: backgroundViewForImage, attribute: .Top, multiplier: 1.0, constant: 2.5),
-                NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: backgroundViewForImage, attribute: .Bottom, multiplier: 1.0, constant: -2.5)
+                NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: backgroundViewForImage, attribute: .Bottom, multiplier: 1.0, constant: -2.5),
                 ])
             
             
@@ -130,21 +128,9 @@ public class TimeLineView: UIView {
                 NSLayoutConstraint(item: button, attribute: .Width, relatedBy: .Equal, toItem: imageView, attribute: .Width, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: button, attribute: .Height, relatedBy: .Equal, toItem: imageView, attribute: .Height, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: imageView, attribute: .Left, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Top, multiplier: 1.0, constant: 0)
+                NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Top, multiplier: 1.0, constant: 0),
                 ])
         }
-        
-        let line = UIView()
-        line.setTranslatesAutoresizingMaskIntoConstraints(false)
-        line.backgroundColor = lineColor
-        v.addSubview(line)
-        sendSubviewToBack(line)
-        v.addConstraints([
-            NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 2.5),
-            NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: v, attribute: .CenterX, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: v, attribute: .Top, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: v, attribute: .Height, multiplier: 1.0, constant: 0)
-            ])
         
         return v
     }
