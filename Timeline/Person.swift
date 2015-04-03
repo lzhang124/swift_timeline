@@ -13,7 +13,7 @@ class Person: UITableViewCell {
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var name: UILabel!
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

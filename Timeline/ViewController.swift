@@ -44,7 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.timeStamp.text = people[indexPath.row].time
         cell.profilePicture.image = people[indexPath.row].image
-        cell.profilePicture.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [231.0/255.0, 145.0/255.0, 42.0/255.0, 1.0])
+        let lineColor = UIColor(red: 231.0/255.0, green: 145.0/255.0, blue: 42.0/255.0, alpha: 1.0).CGColor
+        cell.profilePicture.layer.borderColor = lineColor
         cell.name.text = people[indexPath.row].name
         
         return cell

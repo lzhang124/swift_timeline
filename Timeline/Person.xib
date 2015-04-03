@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Bariol_Regular.otf">
@@ -64,47 +63,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="20" id="0NI-95-BXd"/>
                     <constraint firstItem="DsY-jy-OVh" firstAttribute="leading" secondItem="EBO-Oe-aMU" secondAttribute="trailing" constant="20" id="1ub-Rl-1r9"/>
-                    <constraint firstItem="DsY-jy-OVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="3BU-hA-AWl"/>
-                    <constraint firstItem="DsY-jy-OVh" firstAttribute="top" secondItem="EBO-Oe-aMU" secondAttribute="bottom" constant="4" id="3CC-3H-1QW"/>
-                    <constraint firstAttribute="centerX" secondItem="DsY-jy-OVh" secondAttribute="centerX" id="61n-oz-K28"/>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="19.5" id="6nu-Ha-uac"/>
-                    <constraint firstItem="DsY-jy-OVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Alr-Dp-ISJ"/>
                     <constraint firstAttribute="centerX" secondItem="DsY-jy-OVh" secondAttribute="centerX" id="Ce2-c5-ANI"/>
-                    <constraint firstAttribute="centerX" secondItem="EBO-Oe-aMU" secondAttribute="centerX" id="FdK-i6-RJe"/>
                     <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="20" id="JeI-z4-bzM"/>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="5" id="MPy-Bt-Tda"/>
-                    <constraint firstItem="DsY-jy-OVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19.5" id="NnT-uC-COy"/>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="20" id="UQh-nX-XYH"/>
                     <constraint firstItem="BuE-gl-flb" firstAttribute="leading" secondItem="DsY-jy-OVh" secondAttribute="trailing" constant="19" id="X2Z-KC-bYM"/>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="20" id="a7R-bM-1uq"/>
-                    <constraint firstItem="EBO-Oe-aMU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="cd8-Ie-0Yh"/>
                     <constraint firstItem="DsY-jy-OVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ceg-se-lTa"/>
-                    <constraint firstItem="EBO-Oe-aMU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="ckh-xn-Zf8"/>
                     <constraint firstItem="EBO-Oe-aMU" firstAttribute="centerY" secondItem="DsY-jy-OVh" secondAttribute="centerY" id="h4O-gk-c8M"/>
                     <constraint firstAttribute="trailing" secondItem="BuE-gl-flb" secondAttribute="trailing" constant="10" id="hya-Th-GrB"/>
                     <constraint firstItem="BuE-gl-flb" firstAttribute="centerY" secondItem="DsY-jy-OVh" secondAttribute="centerY" id="o9e-0i-Cmq"/>
-                    <constraint firstAttribute="bottom" secondItem="DsY-jy-OVh" secondAttribute="bottom" constant="20" id="xKL-3t-Rou"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="FdK-i6-RJe"/>
-                        <exclude reference="cd8-Ie-0Yh"/>
-                        <exclude reference="ckh-xn-Zf8"/>
-                        <exclude reference="0NI-95-BXd"/>
-                        <exclude reference="3BU-hA-AWl"/>
-                        <exclude reference="3CC-3H-1QW"/>
-                        <exclude reference="61n-oz-K28"/>
-                        <exclude reference="6nu-Ha-uac"/>
-                        <exclude reference="Alr-Dp-ISJ"/>
-                        <exclude reference="MPy-Bt-Tda"/>
-                        <exclude reference="NnT-uC-COy"/>
-                        <exclude reference="UQh-nX-XYH"/>
-                        <exclude reference="a7R-bM-1uq"/>
-                        <exclude reference="xKL-3t-Rou"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
