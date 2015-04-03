@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scroll.showsVerticalScrollIndicator = false
 
+        var backColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1.000)
+        scroll.backgroundColor = backColor
+        
         timeline = TimelineView(timeFrames: [
             TimeFrame(time: "9:47 AM", image: UIImage(named: "jenn.png")),
             TimeFrame(time: "10:23 AM", image: UIImage(named: "yasyf.png")),

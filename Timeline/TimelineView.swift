@@ -16,9 +16,10 @@ public struct TimeFrame {
 }
 
 public class TimelineView: UIView {
-    public var timeFrames: [TimeFrame]
-    public var lineColor = UIColor(red: 0.906, green: 0.569, blue: 0.165, alpha: 1.000)
-    public var timeColor = UIColor(red: 0.608, green: 0.608, blue: 0.608, alpha: 1.000)
+    var timeFrames: [TimeFrame]
+    var lineColor = UIColor(red: 0.906, green: 0.569, blue: 0.165, alpha: 1.000)
+    var timeColor = UIColor(red: 0.608, green: 0.608, blue: 0.608, alpha: 1.000)
+    var backColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1.000)
     
     required public init(coder aDecoder: NSCoder) {
         timeFrames = []
@@ -39,7 +40,7 @@ public class TimelineView: UIView {
 		guideView.setTranslatesAutoresizingMaskIntoConstraints(false)
         addSubview(guideView)
         addConstraints([
-            NSLayoutConstraint(item: guideView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 20),
+            NSLayoutConstraint(item: guideView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: guideView, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0),
             ])
         
@@ -65,8 +66,8 @@ public class TimelineView: UIView {
         addConstraints([
             NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 2.5),
-            NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: guideView, attribute: .Top, multiplier: 1.0, constant: -200),
-            NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: viewFromAbove, attribute: .Bottom, multiplier: 1.0, constant: 200),
+            NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: -200),
+            NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 200),
             ])
         addConstraint(NSLayoutConstraint(item: viewFromAbove, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -30))
     }
@@ -81,15 +82,16 @@ public class TimelineView: UIView {
         timeStamp.textColor = timeColor
         timeStamp.textAlignment = NSTextAlignment.Center
         timeStamp.text = element.time
+        timeStamp.backgroundColor = backColor
         v.addSubview(timeStamp)
         v.addConstraints([
             NSLayoutConstraint(item: timeStamp, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60),
+            NSLayoutConstraint(item: timeStamp, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 15),
             NSLayoutConstraint(item: timeStamp, attribute: .CenterX, relatedBy: .Equal, toItem: v, attribute: .CenterX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: timeStamp, attribute: .Top, relatedBy: .Equal, toItem: v, attribute: .Top, multiplier: 1.0, constant: 20),
             ])
         
         if let image = element.image {
-            
             let backgroundViewForImage = UIView()
             backgroundViewForImage.setTranslatesAutoresizingMaskIntoConstraints(false)
             backgroundViewForImage.backgroundColor = lineColor
