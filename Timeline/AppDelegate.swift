@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Timeline
 //
-//  Created by Larry Zhang on 4/1/15.
+//  Created by Larry Zhang on 4/3/15.
 //  Copyright (c) 2015 Larry Zhang. All rights reserved.
 //
 
